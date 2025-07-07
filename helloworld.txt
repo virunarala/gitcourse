@@ -1,6 +1,25 @@
-hello world;
-This is a second line;
-This is a third line;
-this is the fourth line;
+Suspend doWork(retry: () -> Unit, retries: Int) {
+repeat(retries - 1) {
+	try {
+retry()
+} catch(e: Exception) {
 
-the lazy brown chicken jumped over the house;
+}
+retry()
+}
+
+Fun String?.toIntOrZero() = this?.toIntOrNull() ?: 0
+Fun String?.toIntOrDefault(value = 0) = this?.toIntOrNull() ?: value
+
+<application>
+
+<service
+name=""
+exported="true"
+
+</>
+
+
+Integer a = 128;
+Integer b = 128;
+a == b
